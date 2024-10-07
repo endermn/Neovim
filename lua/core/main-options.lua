@@ -10,7 +10,7 @@ vim_opts({
 		guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
 		cursorline = true,
 		cursorlineopt = "number",
-		expandtab = true,
+		expandtab = false,
 		tabstop = 4,
 		softtabstop = 4,
 		shiftwidth = 4,

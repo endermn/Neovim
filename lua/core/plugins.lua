@@ -27,6 +27,12 @@ require("lazy").setup({
       },
     },
 	{
+	  "folke/tokyonight.nvim",
+	  lazy = false,
+	  priority = 1000,
+	  opts = {},
+	},
+	{
 		"stevearc/aerial.nvim",
 		cond = enabled(group, "aerial"),
 		cmd = "AerialToggle",

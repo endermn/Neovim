@@ -40,8 +40,8 @@ cmp.setup({
 		}),
 	},
 	mapping = {
-		["<TAB>"] = cmp.mapping.confirm({ select = true }),
-		["<C-n>"] = cmp.mapping(function(fallback)
+		["<TAB>"] = cmp.mapping.confirm({ select = true, behavior = cmp.SelectBehavior.Replace }),
+		["<C-j>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 			elseif luasnip.expand_or_jumpable() then

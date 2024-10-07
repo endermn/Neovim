@@ -53,6 +53,9 @@ end
 
 -- Searching and Highlighting
 map("n", "m", "<CMD>noh<CR>")
+map("n", "<Tab>", "<CMD>bn<CR>")
+map("n", "<S-Tab>", "<CMD>bp<CR>")
+map("n", "<leader>q", "<CMD>bd<CR>")
 
 -- Movement
 -- in insert mode, type <c-d> and your cursor will move past the next separator

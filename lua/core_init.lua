@@ -52,3 +52,11 @@ pcall(require, "lsp-zero")
 if exist and type(user_config) == "table" and user_config.user_conf then
 	user_config.user_conf()
 end
+
+require("tokyonight").setup({
+  style = "storm",
+  transparent = false,
+  terminal_colors = true,
+})
+
+vim.cmd[[colorscheme tokyonight-night]]
