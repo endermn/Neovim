@@ -58,11 +58,11 @@ lspconfig.clangd.setup {
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 }
 
-lspconfig.pylyzer.setup {
+lspconfig.basedpyright.setup {
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_create_autocmd("BufWritePre", {
-          group = vim.api.nvim_create_augroup("PylyzerFormat", {}),
+          group = vim.api.nvim_create_augroup("BasedPyrightFormat", {}),
           buffer = bufnr,
           callback = function()
             vim.lsp.buf.format { async = false }
