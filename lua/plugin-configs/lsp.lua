@@ -88,4 +88,18 @@ lspconfig.html.setup({
 })
 
 
+lspconfig.ts_ls.setup({
+  on_attach = function(client, bufnr)
+    -- Disable ts_ls's formatting if you're using another formatter (like prettier)
+    client.server_capabilities.documentFormattingProvider = false
+
+    local opts = { noremap=true, silent=true }
+    -- Keymaps for LSP functionality
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  end,
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+})
 
