@@ -27,6 +27,12 @@ require("lazy").setup({
       },
     },
 	{
+		"NLKNguyen/papercolor-theme"
+	},
+	{
+		"ThePrimeagen/vim-be-good"
+	},
+	{
 	  "folke/tokyonight.nvim",
 	  lazy = false,
 	  priority = 1000,

@@ -58,5 +58,9 @@ require("tokyonight").setup({
   transparent = false,
   terminal_colors = true,
 })
-
+--
 vim.cmd[[colorscheme tokyonight-night]]
+
+-- vim.cmd[[set background=light]]
+
+-- vim.cmd[[colorscheme papercolor]]
