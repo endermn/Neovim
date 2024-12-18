@@ -29,9 +29,12 @@ require("lazy").setup({
 	{
 		"NLKNguyen/papercolor-theme"
 	},
-	{
-		"ThePrimeagen/vim-be-good"
-	},
+    {
+        'm4xshen/autoclose.nvim',
+        config = function()
+            require('autoclose').setup()
+        end,
+    },
 	{
 	  "folke/tokyonight.nvim",
 	  lazy = false,
