@@ -27,7 +27,13 @@ require("lazy").setup({
       },
     },
 	{
-		"NLKNguyen/papercolor-theme"
+	  "ficcdaf/ashen.nvim",
+	  lazy = false,
+	  priority = 1000,
+	  -- configuration is optional!
+	  opts = {
+		-- your settings here
+	  },
 	},
     {
         'm4xshen/autoclose.nvim',
@@ -35,6 +41,9 @@ require("lazy").setup({
             require('autoclose').setup()
         end,
     },
+	{
+		"shaunsingh/nord.nvim"
+	},
 	{
 	  "folke/tokyonight.nvim",
 	  lazy = false,
